@@ -1,0 +1,34 @@
+%YAML 1.2
+---
+Name: JUO
+Github: JuoCode
+Phone: 12345678910
+Web: http://juo.me
+Home: China
+Introduction: Do not understand the product design is not a good front-end
+
+Experience:
+  - name: fir.im
+    job: Front-end
+    start_at: 2014/04
+    end_at: '-'
+
+Education:
+  - name: Jialidun
+    professional: Sleep
+
+Skills:
+  - name: HTML/Handlebars
+    rate: 30
+  - name: Sketch App/Photoshop
+    rate: 10
+  - name: Angular.js
+    rate: 20
+  - name: LESS/SASS/Coffeescript
+    rate: 40
+
+Hobbies:
+  - Code
+  - Design
+  - Movies
+  - Bike
