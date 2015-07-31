@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{themeInfo.title}}</title>
+  </head>
+  <link rel="stylesheet" href="./stle.css" media="screen" charset="utf-8">
+  <body>
+
+    <h1>{{Name}}</h1>
+
+    <hr>
+    <h2>Experience</h2>
+    <ul>
+      {{#each Experience}}
+        <h4>{{name}}</h4>
+        <b>{{job}}</b>
+        <p>{{start_at}} - {{end_at}}</p>
+      {{/each}}
+    </ul>
+
+    <hr>
+    <h2>Skills</h2>
+    <ul>
+      {{#each Skills}}
+        <p><b>{{name}}</b> - {{rate}}</p>
+      {{/each}}
+    </ul>
+
+    <hr>
+    <h2>Hobbies</h2>
+    <p>
+      {{#each Experience}}
+      {{/each}}
+    </p>
+
+
+
+
+    <script src="./main.js"></script>
+  </body>
+</html>
