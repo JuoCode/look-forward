@@ -1,41 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{{themeInfo.title}}</title>
+    <title>{{Title}}</title>
   </head>
-  <link rel="stylesheet" href="./stle.css" media="screen" charset="utf-8">
+  <link rel="stylesheet" href="./style.css" media="screen" charset="utf-8">
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700">
   <body>
 
-    <h1>{{Name}}</h1>
+    <article>
+      <aside>
+        <section class="avatar" style="background-image:url('{{Avatar}}');">
+          <h1 class="title">
+            {{Name}}
+            <small>{{Professional}}</small>
+          </h1>
+        </section>
+        
+        <section class="profile">
+          <div class="segment intro">
+            <i class="ion-person"></i>
+            <p>{{Introduction}}</p>
+          </div>
+          <div class="segment phone">
+            <i class="ion-ios-telephone"></i>
+            <p>{{Phone}}</p>
+          </div>
+          <div class="segment email">
+            <i class="ion-email"></i>
+            <p>{{Email}}</p>
+          </div>
+          <div class="segment github">
+            <i class="ion-social-github"></i>
+            <p><a href="https://github.com/{{Github}}">{{Github}}</a></p>
+          </div>
+          <div class="segment blog">
+            <i class="ion-ios-world-outline"></i>
+            <p><a href="{{Website}}">{{Website}}</a></p>
+          </div>
+          <div class="segment skills">
+            <i class="ion-clipboard"></i>
+            <h4>Professional Skills</h4>
+            <ul>
+              {{#each Skills}}
+              <li>
+                <span class="skill-name">{{name}}</span>
+                <span class="skill-rate">
+                  <i style="width:{{rate}}%"></i>
+                  <span class="circle" style="left:{{rate}}%"></span>
+                </span>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+        </section>
+        
+        <section class="skills">
+        </section>
+      </aside>
+      
+      <main>
+        <section class="card experiences">
+          <i class="ion-navicon"></i>
+          <h2 class="title">Experiences</h2>
+          <ul>
+            {{#each Experiences}}
+            <li>
+              <b>{{job}} @{{name}}</b>
+              <span><datetime>{{start_at}}</datetime> - <datetime>{{end_at}}</datetime></span>
+              <p>{{desc}}</p>
+            </li>
+            {{/each}}
+          </ul>
+        </section>
+        
+        <section class="card education">
+          <i class="ion-university"></i>
+          <h2 class="title">Education</h2>
+          <ul>
+            {{#each Educations}}
+            <li>
+              <b>{{professional}} @{{name}}</b>
+              <span><datetime>{{start_at}}</datetime> - <datetime>{{end_at}}</datetime></span>
+              <p>{{desc}}</p>
+            </li>
+            {{/each}}
+          </ul>
+        </section>
+        
 
-    <hr>
-    <h2>Experience</h2>
-    <ul>
-      {{#each Experience}}
-        <h4>{{name}}</h4>
-        <b>{{job}}</b>
-        <p>{{start_at}} - {{end_at}}</p>
-      {{/each}}
-    </ul>
-
-    <hr>
-    <h2>Skills</h2>
-    <ul>
-      {{#each Skills}}
-        <p><b>{{name}}</b> - {{rate}}</p>
-      {{/each}}
-    </ul>
-
-    <hr>
-    <h2>Hobbies</h2>
-    <p>
-      {{#each Experience}}
-      {{/each}}
-    </p>
-
-
-
+        {{!-- Use [ionicons](http://ionicons.com/), modify in below --}}
+        <section class="card hobbies">
+          <i class="ion-ios-football"></i>
+          <h2 class="title">Hobbies</h2>
+          <div class="hobbies-icons">
+            <i class="ion-android-bicycle" title="I like to ride"></i>
+            <i class="ion-android-camera" title="Photography"></i>
+            <i class="ion-social-apple" title="Love Apple"></i>
+            <i class="ion-ios-musical-notes" title="I like rock music"></i>
+            <i class="ion-social-twitter" title="I like social"></i>
+          </div>
+        </section> 
+      </main>
+    </article>
 
     <script src="./main.js"></script>
   </body>

@@ -1,21 +1,36 @@
 %YAML 1.2
 ---
+Title: Juo's resume
 Name: JUO
+Avatar: https://randomuser.me/api/portraits/med/men/40.jpg
+Professional: UI & UE Expert
 Github: JuoCode
+Email: oscar.mcdonalid51@example.com
 Phone: 12345678910
-Web: http://juo.me
-Home: China
+Website: http://juo.me
 Introduction: Do not understand the product design is not a good front-end
 
-Experience:
+Experiences:
   - name: fir.im
     job: Front-end
     start_at: 2014/04
-    end_at: '-'
+    end_at: Now
+    desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  - name: fir.im
+    job: Front-end
+    start_at: 2014/04
+    end_at: Now
+    desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-Education:
-  - name: Jialidun
+Educations:
+  - name: Lorem University
+    start_at: 2010/04
+    end_at: 2014/04
     professional: Sleep
+  - name: Lorem University
+    start_at: 2010/04
+    end_at: 2014/04
+    professional: LOL
 
 Skills:
   - name: HTML/Handlebars
@@ -27,8 +42,5 @@ Skills:
   - name: LESS/SASS/Coffeescript
     rate: 40
 
-Hobbies:
-  - Code
-  - Design
-  - Movies
-  - Bike
+# Custom Hobbies in `index.hbs`
+# Hobbies:

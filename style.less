@@ -1,5 +1,205 @@
-@base: #f938ab;
+@charset 'utf-8';
+
+
+@color-body-bg: #EEE;
+@color-aside-bg: #37A4DC;
+@color-content-bg: #EEE;
 
 body{
-  background-color: @base;
+  padding: 0;
+  margin: 0;
+  background-color: @color-body-bg;
+  color: #747474;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body > article{
+  position: relative;
+  max-width: 1280px;
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: @color-content-bg;
+  min-height: 400px;
+  min-height: 100vh;
+  box-shadow: 0 0 6px rgba(0,0,0,.2);
+  
+  aside{
+    position: absolute;
+    height: 100%;
+    padding-bottom: 30px;
+    width: 30.76%;
+    background-color: @color-aside-bg;
+    box-shadow: 1px 0 1px rgba(0,0,0,.2);
+    color: #fff;
+    
+    .avatar{
+      position: relative;
+      height: 315px;
+      background-size: cover;
+      background-position: center;
+      
+      &:before{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 180px;
+        width: 100%;
+        content: ' ';
+        background-image: linear-gradient( to top, rgba(0,0,0,.5), rgba(0,0,0,0));
+      }
+      
+      .title{
+        margin: 0;
+        position: absolute;
+        bottom: 20px;
+        right: 50px;
+        color: #fff;
+        font-size: 30px;
+        small{
+          font-weight: 100;
+          font-size: 18px;
+          display: block;
+        }
+      }
+    }
+  
+    
+    .profile{
+      .segment{
+        padding: 30px 0 0 40px;
+        position: relative;
+        > i{
+          position: absolute;
+          top: 22px;
+          font-size: 28px;
+          float: left;
+        }
+        .ion-person{ margin-top: 2px; }
+        h4{
+          font-size: 24px;
+          margin: 0 0 0 48px;
+        }
+        > p{
+          border-bottom: 1px solid rgba(28, 135, 201,.5);
+          padding: 0px 30px 30px 0px;
+          margin: 0 0 0 48px;
+          a{
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+      }
+      .skills{
+        ul{
+          margin: 30px 0 0 48px;
+          list-style: none;
+          padding: 0;
+          li{
+            display: block;
+            padding-right: 40px;
+            .skill-name{
+              font-weight: normal;
+              font-size: 18px;
+            }
+            .skill-rate{
+              position: relative;
+              display: block;
+              margin: 12px 0 30px;
+              width: 100%;
+              height: 2px;
+              background-color: #1B86C8;
+              .circle{
+                position: absolute;
+                left: 30%;
+                width: 10px;
+                height: 10px;
+                border-radius: 10px;
+                background-color: #fff;
+                display: inline-block;
+                top: -4.5px;
+              }
+              > i{
+                display: block;
+                width: 30%;
+                height: 2px;
+                background-color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  main{
+    padding-left: 30.76%;
+    padding-bottom: 40px;
+    .card{
+      position: relative;
+      margin: 40px 44px 0;
+      background-color: #fff;
+      padding: 40px 0 40px 120px;
+      box-shadow: 0 0 1px rgba(0,0,0,.2);
+      .title{ margin: 0 0 30px; }
+      > i{
+        position: absolute;
+        left: 40px;
+        font-size: 48px;
+        top: 24px;
+      }
+    }
+    
+    .experiences, .education{
+      ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li{
+          b{ 
+            font-size: 18px; 
+            font-weight: normal;
+          }
+          span{ 
+            display: block; 
+            margin: 8px 0; 
+            color: @color-aside-bg;
+          }
+          p{
+            margin: 0;
+          }
+        }
+      }
+    }
+  
+    .experiences{
+      ul{
+        li{
+          padding-right: 40px;
+          border-bottom: 1px solid #B9B7B8;
+          padding-bottom: 40px;
+          margin-bottom: 40px;
+          &:last-child{
+            border: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  
+    .education{
+      ul li{
+        padding-right: 40px;
+        margin-bottom: 60px;
+      }
+    }
+    
+    .hobbies-icons{
+      i{
+        font-size: 60px;
+        color: @color-aside-bg;
+        margin-right: 80px;
+      }
+    }
+  }
 }
